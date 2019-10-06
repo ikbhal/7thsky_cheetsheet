@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<!-- saved from url=(0030)https://devhints.io/typescript -->
+<html lang="en" class="js "><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<link href="https://devhints.io/assets/favicon.png" rel="shortcut icon">
+<meta content="/typescript.html" name="app:pageurl">
+<title>TypeScript cheatsheet</title>
+<meta content="TypeScript cheatsheet" property="og:title">
+<meta content="TypeScript cheatsheet" property="twitter:title">
+<meta content="article" property="og:type">
+<meta content="https://assets.devhints.io/previews/typescript.jpg?t=20190925090400" property="og:image">
+<meta content="https://assets.devhints.io/previews/typescript.jpg?t=20190925090400" property="twitter:image">
+<meta content="900" property="og:image:width">
+<meta content="471" property="og:image:height">
+<meta content="The one-page guide to TypeScript: usage, examples, links, snippets, and more." name="description">
+<meta content="The one-page guide to TypeScript: usage, examples, links, snippets, and more." property="og:description">
+<meta content="The one-page guide to TypeScript: usage, examples, links, snippets, and more." property="twitter:description">
+<link rel="canonical" href="https://devhints.io/typescript">
+<meta name="og:url" content="https://devhints.io/typescript">
+<meta content="Devhints.io cheatsheets" property="og:site_name">
+<meta content="JavaScript libraries" property="article:section">
+<script type="text/javascript" async="" src="./TypeScript cheatsheet_files/analytics.js.download"></script><script async="" src="./TypeScript cheatsheet_files/js"></script>
+<script>
+
+window.dataLayer=window.dataLayer||[];
+function gtag(){dataLayer.push(arguments)};
+gtag('js',new Date());
+gtag('config','UA-106902774-1');
+</script>
+<meta property="page:depth" content="1">
+<script>(function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement)</script>
+<script>(function(H){H.className=H.className.replace(/\bNoJs\b/,'WithJs')})(document.documentElement)</script>
+<script>(function(d,s){if(window.Promise&&[].includes&&Object.assign&&window.Map)return;var js,sc=d.getElementsByTagName(s)[0];js=d.createElement(s);js.src='https://cdn.polyfill.io/v2/polyfill.min.js';sc.parentNode.insertBefore(js, sc);}(document,'script'))</script>
+<!--[if lt IE 9]><script src='https://cdnjs.cloudflare.com/ajax/libs/nwmatcher/1.2.5/nwmatcher.min.js'></script><script src='https://cdnjs.cloudflare.com/ajax/libs/json2/20140204/json2.js'></script><script src='https://cdn.rawgit.com/gisu/selectivizr/1.0.3/selectivizr.js'></script><script src='https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js'></script><script src='https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.js'></script><![endif]-->
+<style>html{opacity:0}</style>
+<link rel="stylesheet" href="./TypeScript cheatsheet_files/style.css">
+<link href="./TypeScript cheatsheet_files/style(1).css" rel="stylesheet">
+<link href="./TypeScript cheatsheet_files/print.css" rel="stylesheet" media="print">
+</head>
+<body>
+<div class="all">
+<div class="site-header">
+<div class="container">
+This is <a href="https://devhints.io/"><em>Devhints.io cheatsheets</em></a> — a collection of cheatsheets I've written.
+</div>
+</div>
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "NewsArticle",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://google.com/article"
+  },
+  "headline": "TypeScript cheatsheet",
+  "image": [ "https://assets.devhints.io/previews/typescript.jpg?t=20190925090400" ],
+  "description": "The one-page guide to TypeScript: usage, examples, links, snippets, and more."
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+    "@type": "ListItem",
+    "position": 1,
+    "item": {
+      "@id": "https://devhints.io/#javascript-libraries",
+      "name": "JavaScript libraries"
+    }
+  },{
+    "@type": "ListItem",
+    "position": 2,
+    "item": {
+      "@id": "https://devhints.io/typescript",
+      "name": "TypeScript"
+    }
+  }]
+}
+</script>
+<div class="post-list -single -cheatsheet">
+<div class="post-item">
+<div class="post-headline -cheatsheet">
+<p class="prelude"><span></span></p>
+<h1><span>TypeScript</span></h1>
+<ul class="social-list ">
+<li class="facebook link hint--bottom" data-hint="Share on Facebook"><a href="https://www.facebook.com/sharer/sharer.php?u=https://devhints.io/typescript.html" target="share"><span class="text"></span></a></li>
+<li class="twitter link hint--bottom" data-hint="Share on Twitter"><a href="https://twitter.com/intent/tweet?text=The%20ultimate%20cheatsheet%20for%20TypeScript.%20https://devhints.io/typescript.html" target="share"><span class="text"></span></a></li>
+</ul>
+</div>
+<div class="post-content -cheatsheet">
+<p>TypeScript is just like ES2015 with type-checking. All ES2015 (classes, etc) should&nbsp;work.</p>
+<h2 id="basic-types">Basic&nbsp;types</h2>
+<pre><code class="language-ts hljs cs">any
+<span class="hljs-keyword">void</span>
+
+boolean
+number
+<span class="hljs-keyword">string</span>
+
+<span class="hljs-keyword">null</span>
+undefined
+
+<span class="hljs-keyword">string</span>[]          <span class="hljs-comment">/* or Array&lt;string&gt; */</span>
+[<span class="hljs-keyword">string</span>, number]  <span class="hljs-comment">/* tuple */</span>
+
+<span class="hljs-keyword">string</span> | <span class="hljs-keyword">null</span> | undefined   <span class="hljs-comment">/* union */</span>
+
+never  <span class="hljs-comment">/* unreachable */</span>
+</code></pre>
+<pre><code class="language-ts hljs coffeescript"><span class="hljs-reserved">enum</span> Color {Red, Green, Blue = <span class="hljs-number">4</span>}
+<span class="hljs-reserved">let</span> <span class="hljs-attribute">c</span>: Color = Color.Green
+</code></pre>
+<h2 id="declarations">Declarations</h2>
+<pre><code class="language-ts hljs bash"><span class="hljs-built_in">let</span> isDone: boolean
+<span class="hljs-built_in">let</span> isDone: boolean = <span class="hljs-literal">false</span>
+</code></pre>
+<pre><code class="language-ts hljs javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">add</span> <span class="hljs-params">(a: number, b: number)</span>: <span class="hljs-title">number</span> </span>{
+  <span class="hljs-keyword">return</span> a + b
+}
+
+<span class="hljs-comment">// Return type is optional</span>
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">add</span> <span class="hljs-params">(a: number, b: number)</span> </span>{ ... }
+</code></pre>
+<h2 id="type-assertions">Type&nbsp;assertions</h2>
+<h4 id="variables">Variables</h4>
+<pre><code class="language-ts hljs cs"><span class="hljs-keyword">let</span> len: number = (input <span class="hljs-keyword">as</span> <span class="hljs-keyword">string</span>).length
+<span class="hljs-keyword">let</span> len: number = (&lt;<span class="hljs-keyword">string</span>&gt; input).length  <span class="hljs-comment">/* not allowed in JSX */</span>
+</code></pre>
+<h4 id="functions">Functions</h4>
+<pre><code class="language-ts hljs cs"><span class="hljs-function">function <span class="hljs-title">object</span><span class="hljs-params">(<span class="hljs-keyword">this</span>: {a: number, b: number}, a: number, b: number)</span> </span>{
+  <span class="hljs-keyword">this</span>.a = a;
+  <span class="hljs-keyword">this</span>.b = b;
+  <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>;
+}
+
+<span class="hljs-comment">// this is used only for type declaration</span>
+<span class="hljs-keyword">let</span> a = <span class="hljs-keyword">object</span>(<span class="hljs-number">1</span>,<span class="hljs-number">2</span>);
+<span class="hljs-comment">// a has type {a: number, b: number}</span>
+</code></pre>
+<h2 id="interfaces">Interfaces</h2>
+<h3 id="inline">Inline</h3>
+<pre><code class="language-ts hljs javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">printLabel</span> <span class="hljs-params">(options: { label: string })</span> </span>{
+  <span class="hljs-built_in">console</span>.log(options.label)
+}
+
+<span class="hljs-comment">// Note the semicolon</span>
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">getUser</span> <span class="hljs-params">()</span>: </span>{ name: string; age?: number } {
+}
+</code></pre>
+<h3 id="explicit">Explicit</h3>
+<pre><code class="language-ts hljs php"><span class="hljs-class"><span class="hljs-keyword">interface</span> <span class="hljs-title">LabelOptions</span> </span>{
+  label: string
+}
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">printLabel</span><span class="hljs-params">(options: LabelOptions)</span> </span>{ ... }
+</code></pre>
+<h3 id="optional-properties">Optional&nbsp;properties</h3>
+<pre><code class="language-ts hljs cs"><span class="hljs-keyword">interface</span> <span class="hljs-title">User</span> {
+  name: <span class="hljs-keyword">string</span>,
+  age?: number
+}
+</code></pre>
+<h3 id="read-only">Read&nbsp;only</h3>
+<pre><code class="language-ts hljs cs"><span class="hljs-keyword">interface</span> <span class="hljs-title">User</span> {
+  <span class="hljs-keyword">readonly</span> name: <span class="hljs-keyword">string</span>
+}
+</code></pre>
+<h3 id="dynamic-keys">Dynamic&nbsp;keys</h3>
+<pre><code class="language-ts hljs cpp">{
+  [key: <span class="hljs-built_in">string</span>]: Object[]
+}
+</code></pre>
+<h2 id="type-aliases">Type&nbsp;aliases</h2>
+<pre><code class="language-ts hljs cpp">type Name = <span class="hljs-built_in">string</span> | <span class="hljs-built_in">string</span>[]
+</code></pre>
+<h2 id="function-types">Function&nbsp;types</h2>
+<pre><code class="language-ts hljs php"><span class="hljs-class"><span class="hljs-keyword">interface</span> <span class="hljs-title">User</span> </span>{ ... }
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">getUser</span><span class="hljs-params">(callback: <span class="hljs-params">(user: User)</span> =&gt; any)</span> </span>{ callback({...}) }
+
+getUser(<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(user: User)</span> </span>{ ... })
+</code></pre>
+<h2 id="classes">Classes</h2>
+<pre><code class="language-ts hljs cs"><span class="hljs-keyword">class</span> <span class="hljs-title">Point</span> {
+  x: number
+  y: number
+  <span class="hljs-keyword">static</span> instances = <span class="hljs-number">0</span>
+  constructor(x: number, y: number) {
+    <span class="hljs-keyword">this</span>.x = x
+    <span class="hljs-keyword">this</span>.y = y
+  }
+}
+</code></pre>
+<h4 id="inheritance">Inheritance</h4>
+<pre><code class="language-ts hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Point</span> </span>{...}
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Point3D</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Point</span> </span>{...}
+
+<span class="hljs-class"><span class="hljs-keyword">interface</span> <span class="hljs-title">Colored</span> </span>{...}
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Pixel</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Point</span> <span class="hljs-keyword">implements</span> <span class="hljs-title">Colored</span> </span>{...}
+</code></pre>
+<h4 id="short-fields-initialisation">Short fields initialisation</h4>
+<pre><code class="language-ts hljs cs"><span class="hljs-keyword">class</span> <span class="hljs-title">Point</span> {
+  <span class="hljs-keyword">static</span> instances = <span class="hljs-number">0</span>;
+  constructor(
+    <span class="hljs-keyword">public</span> x: number,
+    <span class="hljs-keyword">public</span> y: number,
+  ){}
+}
+</code></pre>
+<h4 id="fields-which-do-not-require-initialisation">Fields which do not require initialisation</h4>
+<pre><code class="language-ts hljs cs"><span class="hljs-keyword">class</span> <span class="hljs-title">Point</span> {
+  <span class="hljs-keyword">public</span> someUselessValue!: number;
+  ...
+}
+</code></pre>
+<h2 id="generics">Generics</h2>
+<pre><code class="language-ts hljs coffeescript"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Greeter</span>&lt;<span class="hljs-title">T</span>&gt; {</span>
+  <span class="hljs-attribute">greeting</span>: T
+  constructor(<span class="hljs-attribute">message</span>: T) {
+    <span class="hljs-keyword">this</span>.greeting = message
+  }
+}
+
+<span class="hljs-reserved">let</span> greeter = <span class="hljs-keyword">new</span> Greeter&lt;string&gt;(<span class="hljs-string">'Hello, world'</span>)
+</code></pre>
+<h2 id="modules">Modules</h2>
+<pre><code class="language-ts hljs cs">export <span class="hljs-keyword">interface</span> <span class="hljs-title">User</span> { ... }
+</code></pre>
+<h2 id="type-extraction">Type&nbsp;extraction</h2>
+<pre><code class="language-ts hljs markdown">interface Building {
+  room: {
+<span class="hljs-code">    door: string,</span>
+<span class="hljs-code">    walls: string[],</span>
+  };
+}
+
+type Walls = Building[<span class="hljs-link_label">'room'</span>][<span class="hljs-link_reference">'walls'</span>]; // string[]
+</code></pre>
+</div>
+<ul class="social-list ">
+<li class="facebook link hint--bottom" data-hint="Share on Facebook"><a href="https://www.facebook.com/sharer/sharer.php?u=https://devhints.io/typescript.html" target="share"><span class="text"></span></a></li>
+<li class="twitter link hint--bottom" data-hint="Share on Twitter"><a href="https://twitter.com/intent/tweet?text=The%20ultimate%20cheatsheet%20for%20TypeScript.%20https://devhints.io/typescript.html" target="share"><span class="text"></span></a></li>
+</ul>
+</div>
+</div>
+<div class="about-the-site">
+<div class="container">
+<p class="blurb">
+<strong><a href="https://devhints.io/">Devhints.io cheatsheets</a></strong> is a collection of cheatsheets I've written over the years.
+Suggestions and corrections? <a href="https://github.com/rstacruz/cheatsheets/issues/907">Send them in</a>.
+<i class="fleuron"></i>
+I'm <a href="http://ricostacruz.com/">Rico Sta. Cruz</a>.
+Check out my <a href="http://ricostacruz.com/til">Today I learned blog</a> for&nbsp;more.
+</p>
+<p class="back">
+<a class="big-button -back -slim" href="https://devhints.io/#toc"></a>
+</p>
+<p>
+</p>
+</div>
+</div>
+<script src="./TypeScript cheatsheet_files/highlight.min.js.download"></script>
+<script src="./TypeScript cheatsheet_files/index.js.download"></script>
+<script>hljs.initHighlightingOnLoad()</script>
+<script>unorphan('h1, h2, h3, p, li, .unorphan')</script>
+
+
+</div><iframe frameborder="0" scrolling="no" style="background-color: transparent; border: 0px; display: none;" src="./TypeScript cheatsheet_files/saved_resource.html"></iframe><div id="GOOGLE_INPUT_CHEXT_FLAG" input="" input_stat="{&quot;tlang&quot;:true,&quot;tsbc&quot;:true,&quot;pun&quot;:true,&quot;mk&quot;:true,&quot;ss&quot;:true}" style="display: none;"></div></body></html>
